@@ -10,16 +10,16 @@ header {
 }
 
 main {
+  display: flex;
   width: 100%;
   margin: 50px auto;
-  display: inline-block;
 }
 
 .step-box {
   width: 90%;
-  margin-right: 30px;
   padding: 10px;
   position: relative;
+  margin-right: 30px;
   background-color: #eee;
 }
 
@@ -66,25 +66,15 @@ footer {
   background-color: #aaa;
 }
 
-/* すべての画面サイズで適用される設定 */
-.social i {
-  color: black;
-}
-/* タブレット横置きサイズ（1024px）以下の際に適用される設定 */
-@media screen and (max-width: 1024px) {
-  .social i {
-    color: green;
-  }
-}
-/* タブレット縦置きサイズ（768px）以下の際に適用される設定 */
 @media screen and (max-width: 768px) {
-  .social i {
-    color: red;
+  main {
+    display: block;
   }
-}
-/* スマートフォンサイズ（425px）以下の際に適用される設定 */
-@media screen and (max-width: 425px) {
-  .social i {
-    color: blue;
+  .step-box {
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .step-box:last-child {
+    margin: auto;
   }
 }
